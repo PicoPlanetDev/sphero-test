@@ -21,6 +21,15 @@ with SpheroEduAPI(toy) as sphero:
     for i in range(4):
         sphero.roll(i * 90, 100, 1)
 
+    # What if we wanted to roll in any regular polygon?
+    # Do some math
+    # 360 / num_sides = angle
+    # hexagon = 360 / 6 = 60 for example
+    num_sides = 6
+    angle = 360 / num_sides
+    for i in range(num_sides):
+        sphero.roll(i * angle, 100, 1)
+
     # let's go back and make a circle
     sphero.set_heading(0)
     sphero.set_speed(100)
