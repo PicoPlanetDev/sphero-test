@@ -3,7 +3,9 @@ from spherov2 import scanner
 from spherov2.sphero_edu import SpheroEduAPI
 from spherov2.types import Color
 
-toy = scanner.find_toy()
+TOY_NAME = "SB-BFEA"
+
+toy = scanner.find_toy(toy_name=TOY_NAME)
 with SpheroEduAPI(toy) as sphero:
     # Make the matrix show Hello World
     text_color = Color(r=255, g=0, b=0)
@@ -28,6 +30,6 @@ with SpheroEduAPI(toy) as sphero:
     # What about more text?
     text = 'Hello World'
     text_color = Color(r=0, g=0, b=255)
-    sphero.scroll_matrix_text(text, text_color, 10, wait=True)
+    sphero.scroll_matrix_text(text, text_color, 30, wait=True)
 
     # Or an animation?
