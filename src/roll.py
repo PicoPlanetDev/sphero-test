@@ -37,7 +37,5 @@ with SpheroEduAPI(toy) as sphero:
     # let's go back and make a circle
     sphero.set_heading(0)
     sphero.set_speed(100)
-    for i in range(360):
-        sphero.roll(0, 100, 0.1)
-        time.sleep(0.02)
+    sphero.spin(360,2)
     sphero.set_speed(0)    
