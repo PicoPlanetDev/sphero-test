@@ -40,6 +40,6 @@ with SpheroEduAPI(toy) as sphero:
 
     # let's go back and make a circle
     sphero.set_heading(0)
-    for i in range(360):
-        sphero.roll(i, 255, 0.02)
-        time.sleep(0.02)
+    sphero.set_speed(100)
+    sphero.spin(360,2)
+    sphero.set_speed(0)    
