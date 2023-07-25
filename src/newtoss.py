@@ -7,6 +7,7 @@ TOY_NAME = "SB-BFEA"
 toy = scanner.find_toy(toy_name=TOY_NAME)
 with SpheroEduAPI(toy) as sphero:
     sphero.set_main_led(Color(255,0,0))
+    num_tosses = 0
     falling = False
     lastFalling = False
     while True:

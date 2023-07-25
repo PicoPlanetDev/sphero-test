@@ -3,7 +3,7 @@ from spherov2 import scanner
 from spherov2.sphero_edu import SpheroEduAPI
 from spherov2.types import Color
 
-TOY_NAME = "SB-BFEA"
+TOY_NAME = "BB-EFF7"
 
 toy = scanner.find_toy(toy_name=TOY_NAME)
 with SpheroEduAPI(toy) as sphero:
@@ -28,7 +28,7 @@ with SpheroEduAPI(toy) as sphero:
     red = 255
     green = 0
     blue = 0
-    delay = 0.005 # 5 milliseconds
+    delay = 0.001 # 5 milliseconds
     for i in range(255):
         sphero.set_main_led(Color(r=red, g=green, b=blue))
         green += 1
